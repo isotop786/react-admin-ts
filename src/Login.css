@@ -14,3 +14,9 @@
     top: 30%;
     transform: translate(-50%,-30%);
 }
+.center-div{
+    position: relative;
+    /* left: 40%; */
+    /* top: 50%; */
+    /* transform: translate(-30%,-30%); */
+}
