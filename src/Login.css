@@ -1,0 +1,16 @@
+/* @media screen and (min-width: 400px)
+{
+    .form-signin{
+        position: absolute;
+        left: 48%;
+        top: 30%;
+        transform: translate(-50%,-30%);
+    }
+} */
+
+.form-signin{
+    position: absolute;
+    left: 48%;
+    top: 30%;
+    transform: translate(-50%,-30%);
+}
