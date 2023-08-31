@@ -16,7 +16,7 @@ const Menu:React.FC = () => {
           <li className="nav-item">
             <Link to={'/users'} className="nav-link" >
               <span data-feather="users"></span>
-              Customers
+              Users
             </Link>
           </li>
       
