@@ -20,6 +20,7 @@ const Login = () => {
             },{withCredentials: true})
             .then((res)=>{
                 alert('Login success')
+                localStorage.setItem('auth_token',res.data.token)
             })
             .catch(err=>{
                 alert(err.response.data.message)
