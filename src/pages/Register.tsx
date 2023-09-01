@@ -11,6 +11,8 @@ const Register = () => {
     const [errMsg, setErrMsg] = useState('');
     const [isSuccess, setSuccess] = useState(false);
     const [isSubmitted, setSubmitted] = useState(false);
+    const [isDelay,setDelay] = useState(false);
+
   const formik = useFormik({
     initialValues: {
       firstName: '',
@@ -24,6 +26,9 @@ const Register = () => {
         if(values.password === values.password_confirm)
         {
             setSubmitted(true)
+            setTimeout(()=>{
+                setDelay(true)
+            },5500)
             // alert(JSON.stringify(values, null, 2));
             axios.post('https://nestadmin.onrender.com/api/register',{
                 first_name: values.firstName,
@@ -120,11 +125,13 @@ const Register = () => {
                     />
                     {!isSubmitted ?(
                         <button className='btn btn-primary mt-2' type="submit">Submit</button>
-                    ) :(
+                    ) :(<>
                         <button className="btn btn-primary mt-3 " type="button" disabled>
                             <span className="spinner-border spinner-border-sm" aria-hidden="true"></span>
                             <span style={{marginLeft:".5rem"}} role="status">Registering...</span>
                         </button>
+                        {isDelay && (<p>Sorry, it is taking longer for the backend wake up, <br/>it's been deployed in a free service of "Render".<br/>Please be patient, thank you:).</p>)}
+                        </>
                     )}
                     
                     <p className="mt-5 mb-3 text-muted">Already have account? <Link to="/login">Login</Link> here</p>
