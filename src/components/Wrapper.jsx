@@ -1,12 +1,13 @@
 import React, { Component, useState } from 'react'
-import { Nav } from './Nav'
+import Nav from './Nav'
 import Menu from './Menu'
 import { Link,useNavigate } from 'react-router-dom';
 import { Navigate } from "react-router-dom"
+import {AiOutlineLogout} from 'react-icons/ai'
 
 export class Wrapper extends Component {
     
-    constructor(props){
+    constructor(props ){
         super(props);
         this.state = {isRedirect: false}
     }
