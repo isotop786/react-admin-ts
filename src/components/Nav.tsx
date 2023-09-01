@@ -10,15 +10,18 @@ import { useNavigate } from "react-router-dom"
 
         function logout()
         {
-            // alert(0)
-            localStorage.clear();
-            navigate('/login')
-            axios.post('https://nestadmin.onrender.com/api/logout')
-            .then(res=> navigate('/login'))
-            .catch(err => {
-                console.log(err)
+            const confirm = window.confirm("Are you sure to signout?")
+            if(confirm){
+                // alert(0)
+                localStorage.clear();
                 navigate('/login')
-            })
+                axios.post('https://nestadmin.onrender.com/api/logout')
+                .then(res=> navigate('/login'))
+                .catch(err => {
+                    console.log(err)
+                    navigate('/login')
+                })
+            }
         }
 
         return(
