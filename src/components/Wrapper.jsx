@@ -52,9 +52,12 @@ const Wrapper =(props)=> {
         <div className="container-fluid">
             <div className="row">
                 <Menu/>
-            <main role="main" className="col-md-9 ml-sm-auto col-lg-10 px-4 py-2 ">
+  
+   
+           <main role="main" className="col-md-9 ml-sm-auto col-lg-10 px-4 py-2 ">
                 {props.children}
             </main>
+  
             </div>
         </div>
       </>
