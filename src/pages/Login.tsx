@@ -27,7 +27,7 @@ const Login = () => {
                 setDelay(true)
             },5500)
             // alert(JSON.stringify(values, null, 2));
-            axios.post('https://nestadmin.onrender.com/api/login',{
+            axios.post('login',{
                 email: values.email,
                 password: values.password
             },{withCredentials: true})

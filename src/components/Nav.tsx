@@ -8,19 +8,38 @@ import { useNavigate } from "react-router-dom"
 
     const navigate = useNavigate();
 
+    const [user, setUser] = useState({
+        first_name:''
+    })
+
+    useEffect( () =>{
+        (
+            async()=>{
+                const {data} = await axios.get('user',{withCredentials: true})
+                setUser(data);
+            }
+        )();
+
+
+
+    },[])
+
+
         function logout()
         {
             const confirm = window.confirm("Are you sure to signout?")
             if(confirm){
                 // alert(0)
-                localStorage.clear();
-                navigate('/login')
+                
                 axios.post('https://nestadmin.onrender.com/api/logout')
                 .then(res=> navigate('/login'))
                 .catch(err => {
                     console.log(err)
                     navigate('/login')
                 })
+
+                localStorage.clear();
+                navigate('/login')
             }
         }
 
@@ -32,6 +51,10 @@ import { useNavigate } from "react-router-dom"
                 </button>
                 <input className="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search"/>
                 <ul className="navbar-nav px-3">
+
+                    <li className="nav-item text-nowrap">
+                    <span>{user?.first_name}</span>
+                    </li>
                     <li className="nav-item text-nowrap">
                     <a onClick={e =>{ e.preventDefault(); logout()}} className="nav-link" href="#">Sign out <AiOutlineLogout color='red' size={20}/></a>
                     </li>

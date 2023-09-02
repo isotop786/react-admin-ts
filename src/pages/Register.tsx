@@ -30,7 +30,7 @@ const Register = () => {
                 setDelay(true)
             },5500)
             // alert(JSON.stringify(values, null, 2));
-            axios.post('https://nestadmin.onrender.com/api/register',{
+            axios.post('register',{
                 first_name: values.firstName,
                 last_name: values.lastName,
                 email: values.email,
