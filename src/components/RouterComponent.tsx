@@ -4,6 +4,7 @@ import Dashboard from '../pages/Dashboard';
 import Users from '../pages/users/Users';
 import Register from '../pages/Register';
 import Login from '../pages/Login';
+import Products from '../pages/products/Products';
 
 export class RouterComponent extends Component {
   render() {
@@ -14,6 +15,7 @@ export class RouterComponent extends Component {
         <Route path='/users' element={<Users/>}/>
         <Route path='/register' element={<Register/>}/>
         <Route path='/login' element={<Login/>}/>
+        <Route path='/products' element={<Products/>}/>
         </Routes>
       </>
     )

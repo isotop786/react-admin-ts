@@ -8,7 +8,7 @@ const Menu:React.FC = () => {
         <ul className="nav flex-column">
           <li className="nav-item">
             <Link to={"/"}  className="nav-link active">
-                Dashboard <span className="sr-only">(current)</span>
+                Dashboard
             </Link>
           </li>
           
@@ -17,6 +17,13 @@ const Menu:React.FC = () => {
             <Link to={'/users'} className="nav-link" >
               <span data-feather="users"></span>
               Users
+            </Link>
+          </li>
+         
+          <li className="nav-item">
+            <Link to={'/products'} className="nav-link" >
+              <span data-feather="users"></span>
+              Products
             </Link>
           </li>
       

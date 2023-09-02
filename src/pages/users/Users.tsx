@@ -54,11 +54,11 @@ const Users = ()=> {
           </div>
           ):(
           <>
-        <div className="text-center mt-4 pt-4">
-          <div className="spinner-border" role="status">
-            <span className="visually-hidden">User's Data is Loading...</span>
-          </div>
-        </div>
+        (<div className='row' style={{position:"absolute",top:"50%",left:"45%"}}>
+            <div className="d-flex align-items-center">
+        <strong role="status">Users are loading...</strong>
+        <div className="spinner-border ms-auto" aria-hidden="true"></div>
+      </div></div>)
           </>)}
         
       
