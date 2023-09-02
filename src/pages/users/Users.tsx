@@ -12,10 +12,10 @@ const Users = ()=> {
   useEffect(()=>{
     (
       async()=>{
-        const {data} = await axios.get('users?page=1')
-        // console.log(res)
+        const {data} = await axios.get('users')
+        console.log(data)
         // console.log("Cookie"+res)
-        setUsers(data.data)
+        setUsers(data)
 
       }
       
@@ -24,15 +24,15 @@ const Users = ()=> {
 
     return (
         <Wrapper>
-        <div className="table-responsive">
-          {users ? (
+        
+          {users?.length > 0 ? (
+            <div className="table-responsive">
             <table className="table table-striped table-sm">
             <thead>
               <tr>
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Email</th>
-                <th>Role</th>
                 <th>Action</th>
               </tr>
             </thead>
@@ -42,16 +42,26 @@ const Users = ()=> {
                 <td>{user.first_name}</td>
                 <td>{user.last_name}</td>
                 <td>{user.email}</td>
-                <td></td>
-                <td></td>
+                <td>
+                  <button className='btn btn-warning' >Edit</button>
+                  <button className='btn btn-danger' >Delete</button>
+                </td>
               </tr>
               ))}
               
             </tbody>
           </table>
-          ):(<div>User's data Loading...</div>)}
+          </div>
+          ):(
+          <>
+        <div className="text-center mt-4 pt-4">
+          <div className="spinner-border" role="status">
+            <span className="visually-hidden">User's Data is Loading...</span>
+          </div>
+        </div>
+          </>)}
         
-      </div>
+      
       </Wrapper>
     )
   }

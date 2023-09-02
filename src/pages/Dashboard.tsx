@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import Wrapper from '../components/Wrapper'
+import { Verticle } from './dashboard/Verticle'
+import { Horizontal } from './dashboard/Horizontal'
 
 export class Dashboard extends Component {
   render() {
@@ -18,6 +20,14 @@ export class Dashboard extends Component {
           </button>
         </div>
       </div>
+        <div className='row'>
+            <div className="col-md-6">
+                <Verticle/>
+            </div>
+            <div className="col-md-6">
+                <Horizontal/>
+            </div>
+        </div>
       </Wrapper>
     )
   }
