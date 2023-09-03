@@ -104,6 +104,7 @@ const Login = () => {
                         {isDelay && (<p>Sorry, it is taking longer for the backend wake up, <br/>it's been deployed in a free service of "Render".<br/>Please be patient, thank you:).</p>)}
                         </>
                     )}
+                    <p className="mt-4  text-muted">Example Account( emali: maruf@email.com, password:123456)</p>
                 <p className="mt-5 mb-3 text-muted">Don't have account? <Link to="/register">Register</Link> here</p>
                 <p className="mt-5 mb-3 text-muted">&copy; MERN CRM</p>
             </form>
