@@ -1,5 +1,8 @@
 import React from 'react'
 import { Link,useLocation } from 'react-router-dom'
+import {MdOutlineSpaceDashboard} from 'react-icons/md'
+import {AiOutlineUser} from 'react-icons/ai'
+import {MdProductionQuantityLimits} from 'react-icons/md'
 
 const Menu:React.FC = () => {
     const location = useLocation();
@@ -8,8 +11,8 @@ const Menu:React.FC = () => {
       <div className="sidebar-sticky pt-3">
         <ul className="nav flex-column">
           <li className="nav-item">
-            <Link to={"/"}  className="nav-link active"  style={location.pathname=="/" ? {fontWeight:"bold"} : {}}>
-                Dashboard
+            <Link to={"/"}  className="nav-link active "  style={location.pathname=="/" ? {fontWeight:"bold",display:"flex",alignItems:"center"} : {}}>
+                <MdOutlineSpaceDashboard color='#111' size={20}/> <span>Dashboard</span>
             </Link>
           </li>
           
@@ -17,14 +20,14 @@ const Menu:React.FC = () => {
           <li className="nav-item">
             <Link to={'/users'} className="nav-link" style={location.pathname=="/users" ? {fontWeight:"bold"} : {}}>
               <span data-feather="users"></span>
-              Users
+              <AiOutlineUser color='#111' size={20}/> Users
             </Link>
           </li>
          
           <li className="nav-item">
             <Link to={'/products'} className="nav-link" style={location.pathname=="/products" ? {fontWeight:"bold"} : {}}>
               <span data-feather="users"></span>
-              Products
+               <MdProductionQuantityLimits color='#111' size={20}/> Products
             </Link>
           </li>
       
