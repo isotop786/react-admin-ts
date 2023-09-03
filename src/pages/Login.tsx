@@ -105,7 +105,7 @@ const Login = () => {
                         </>
                     )}
                 <p className="mt-5 mb-3 text-muted">Don't have account? <Link to="/register">Register</Link> here</p>
-                <p className="mt-5 mb-3 text-muted">&copy; MERN Admin Dashboard</p>
+                <p className="mt-5 mb-3 text-muted">&copy; MERN CRM</p>
             </form>
             </div>
         </div>

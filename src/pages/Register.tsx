@@ -135,7 +135,7 @@ const Register = () => {
                     )}
                     
                     <p className="mt-5 mb-3 text-muted">Already have account? <Link to="/login">Login</Link> here</p>
-                    <p className="mt-5 mb-3 text-muted">&copy; MERN Admin Dashboard</p>
+                    <p className="mt-5 mb-3 text-muted">&copy; MERN CRM</p>
                     </form>
                 </div>
                 </div>
@@ -160,53 +160,3 @@ const Register = () => {
 };
 
 export default Register;
-
-
-
-
-// import React,{useState,} from 'react'
-// import '../Login.css'
-// import { Link } from 'react-router-dom'
-// import { useFormik } from 'formik';
-
-
-// const Register:React.FC = () => {
-//   return (
-//     <div className="container">
-//         <div className="row">
-            
-//             <div className="col-md-8">
-//             <div className="">
-//                 <form className="form-signin">
-//                 <h1 className="h3 mb-3 font-weight-normal">Registration Form</h1>
-                
-//                 <label htmlFor="firstName" className="sr-only">First Name</label>
-//                 <input type="text" id="firstName" className="form-control" placeholder="First Name" required />
-                
-//                 <label htmlFor="firstName" className="sr-only">Last Name</label>
-//                 <input type="text" id="inpufirstNametEmail" className="form-control" placeholder="Last Name" required />
-                
-//                 <label htmlFor="inputEmail" className="sr-only">Email address</label>
-//                 <input type="email" id="inputEmail" className="form-control" placeholder="Email address" required />
-                
-//                 <label htmlFor="inputPassword" className="sr-only">Password</label>
-//                 <input type="password" id="inputPassword" className="form-control" placeholder="Password" required/>
-                
-//                 <label htmlFor="inputPasswordConfirm" className="sr-only">Password Confirm</label>
-//                 <input type="password" id="inputPasswordConfirm" className="form-control" placeholder="Password Confirm" required/>
-
-//                 <button className="btn btn-primary btn-block mt-4" type="submit">Register</button>
-//                 <p className="mt-5 mb-3 text-muted">Already have account? <Link to="/login">Login</Link> here</p>
-//                 <p className="mt-5 mb-3 text-muted">&copy; MERN Admin Dashboard</p>
-//                 </form>
-//                 </div>
-//             </div>
-            
-//         </div>
-//     </div>
-
-     
-//   )
-// }
-
-// export default Register
