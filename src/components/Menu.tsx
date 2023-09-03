@@ -13,7 +13,8 @@ const Menu:React.FC = () => {
       <div className="sidebar-sticky pt-3">
         <ul className="nav flex-column">
           <li className="nav-item">
-            <Link to={"/"}  className="nav-link active "  style={location.pathname=="/" ? {fontWeight:"bold",display:"flex",alignItems:"center"} : {}}>
+            <Link to={"/"}  className="nav-link active "  style={location.pathname=="/" ? {fontWeight:"bold"} : {}}>
+                <span data-feather="dashboard"></span>
                 <MdOutlineSpaceDashboard color='#FFC107' size={20}/> <span>Dashboard</span>
             </Link>
           </li>

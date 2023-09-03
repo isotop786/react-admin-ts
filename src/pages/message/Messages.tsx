@@ -49,7 +49,7 @@ const Messages = () => {
           </div>
         ) : (<div className='row' style={{position:"absolute",top:"50%",left:"45%"}}>
             <div className="d-flex align-items-center">
-        <strong role="status">Order data loading...</strong>
+        <strong role="status">Messages are loading...</strong>
         <div className="spinner-border ms-auto" aria-hidden="true"></div>
       </div></div>)}
     </Wrapper>
