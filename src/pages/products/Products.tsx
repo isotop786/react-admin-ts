@@ -3,6 +3,7 @@ import Wrapper from '../../components/Wrapper'
 import { Product } from '../../models/Product'
 import axios from 'axios'
 import { transform } from 'typescript'
+import { Link } from 'react-router-dom'
 
 
 function Products() {
@@ -24,6 +25,9 @@ function Products() {
     <Wrapper>
         {products.length >0 ? ( 
             <div className="table-responsive">
+                <div className='d-flex justify-content-end my-3'>
+                    <Link to={'/products/add'} className='btn btn-success'>Add Product</Link>
+                </div>
             <table className="table table-striped table-sm">
             <thead>
               <tr>
