@@ -6,6 +6,7 @@ import Register from '../pages/Register';
 import Login from '../pages/Login';
 import Products from '../pages/products/Products';
 import AddProduct from '../pages/products/AddProduct';
+import Orders from '../pages/orders/Orders';
 
 export class RouterComponent extends Component {
   render() {
@@ -18,6 +19,7 @@ export class RouterComponent extends Component {
         <Route path='/login' element={<Login/>}/>
         <Route path='/products' element={<Products/>}/>
         <Route path='/products/add' element={<AddProduct/>}/>
+        <Route path='/orders' element={<Orders/>}/>
         </Routes>
       </>
     )

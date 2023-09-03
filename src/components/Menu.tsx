@@ -3,6 +3,7 @@ import { Link,useLocation } from 'react-router-dom'
 import {MdOutlineSpaceDashboard} from 'react-icons/md'
 import {AiOutlineUser} from 'react-icons/ai'
 import {MdProductionQuantityLimits} from 'react-icons/md'
+import {FcSalesPerformance} from 'react-icons/fc'
 
 const Menu:React.FC = () => {
     const location = useLocation();
@@ -28,6 +29,13 @@ const Menu:React.FC = () => {
             <Link to={'/products'} className="nav-link" style={location.pathname=="/products" ? {fontWeight:"bold"} : {}}>
               <span data-feather="users"></span>
                <MdProductionQuantityLimits color='#111' size={20}/> Products
+            </Link>
+          </li>
+
+          <li className="nav-item">
+            <Link to={'/orders'} className="nav-link" style={location.pathname=="/orders" ? {fontWeight:"bold"} : {}}>
+              <span data-feather="users"></span>
+               <FcSalesPerformance color='#111' size={20}/> Orders
             </Link>
           </li>
       

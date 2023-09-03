@@ -20,7 +20,7 @@ function Dashboard() {
                 <Horizontal/>
             </div>
         </div>
-        <div className='row'>
+        <div className='row my-4'>
             <div className="col-md-6">
                <LineChart/>
             </div>

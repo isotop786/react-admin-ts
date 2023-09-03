@@ -13,7 +13,7 @@ const Users = ()=> {
     (
       async()=>{
         const {data} = await axios.get('users')
-        console.log(data)
+        // console.log(data)
         // console.log("Cookie"+res)
         setUsers(data)
 
