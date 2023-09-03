@@ -7,6 +7,8 @@ import Login from '../pages/Login';
 import Products from '../pages/products/Products';
 import AddProduct from '../pages/products/AddProduct';
 import Orders from '../pages/orders/Orders';
+import Messages from '../pages/message/Messages';
+import Read from '../pages/message/Read';
 
 export class RouterComponent extends Component {
   render() {
@@ -20,6 +22,8 @@ export class RouterComponent extends Component {
         <Route path='/products' element={<Products/>}/>
         <Route path='/products/add' element={<AddProduct/>}/>
         <Route path='/orders' element={<Orders/>}/>
+        <Route path='/messages' element={<Messages/>}/>
+        <Route path='/messages/:id' element={<Read/>}/>
         </Routes>
       </>
     )

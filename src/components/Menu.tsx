@@ -4,6 +4,7 @@ import {MdOutlineSpaceDashboard} from 'react-icons/md'
 import {AiOutlineUser} from 'react-icons/ai'
 import {MdProductionQuantityLimits} from 'react-icons/md'
 import {FcSalesPerformance} from 'react-icons/fc'
+import {BiSolidMessageDetail} from 'react-icons/bi'
 
 const Menu:React.FC = () => {
     const location = useLocation();
@@ -13,7 +14,7 @@ const Menu:React.FC = () => {
         <ul className="nav flex-column">
           <li className="nav-item">
             <Link to={"/"}  className="nav-link active "  style={location.pathname=="/" ? {fontWeight:"bold",display:"flex",alignItems:"center"} : {}}>
-                <MdOutlineSpaceDashboard color='#111' size={20}/> <span>Dashboard</span>
+                <MdOutlineSpaceDashboard color='#FFC107' size={20}/> <span>Dashboard</span>
             </Link>
           </li>
           
@@ -21,21 +22,28 @@ const Menu:React.FC = () => {
           <li className="nav-item">
             <Link to={'/users'} className="nav-link" style={location.pathname=="/users" ? {fontWeight:"bold"} : {}}>
               <span data-feather="users"></span>
-              <AiOutlineUser color='#111' size={20}/> Users
+              <AiOutlineUser color='#FFC107' size={20}/> Users
             </Link>
           </li>
          
           <li className="nav-item">
             <Link to={'/products'} className="nav-link" style={location.pathname=="/products" ? {fontWeight:"bold"} : {}}>
               <span data-feather="users"></span>
-               <MdProductionQuantityLimits color='#111' size={20}/> Products
+               <MdProductionQuantityLimits color='#FFC107' size={20}/> Products
             </Link>
           </li>
 
           <li className="nav-item">
             <Link to={'/orders'} className="nav-link" style={location.pathname=="/orders" ? {fontWeight:"bold"} : {}}>
               <span data-feather="users"></span>
-               <FcSalesPerformance color='#111' size={20}/> Orders
+               <FcSalesPerformance color='#FFC107' size={20}/> Orders
+            </Link>
+          </li>
+        
+          <li className="nav-item">
+            <Link to={'/messages'} className="nav-link" style={location.pathname=="/messages" ? {fontWeight:"bold"} : {}}>
+              <span data-feather="users"></span>
+               <BiSolidMessageDetail color='#FFC107' size={20}/> Message
             </Link>
           </li>
       
