@@ -6,7 +6,8 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import axios from 'axios';
 
-axios.defaults.baseURL = 'https://nestadmin.onrender.com/api/';
+// axios.defaults.baseURL = 'https://nestadmin.onrender.com/api/';
+axios.defaults.baseURL = 'https://nestjs-admin.vercel.app/api/';
 axios.defaults.withCredentials = true;
 
 const root = ReactDOM.createRoot(

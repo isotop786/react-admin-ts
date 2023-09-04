@@ -32,6 +32,7 @@ const Login = () => {
                 password: values.password
             },{withCredentials: true})
             .then((res)=>{
+                console.log(res)
                 // alert('Login success')
                 localStorage.setItem('auth_token',res.data.token)
                 setSubmitted(false)
@@ -39,6 +40,7 @@ const Login = () => {
 
             })
             .catch(err=>{
+                console.log(err)
                 alert(err.response.data.message)
                 console.log(err.message)
                 console.log(err.response.data.message)
